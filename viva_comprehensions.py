@@ -26,7 +26,8 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     #         list.append(int(number))
     # return list
 
-    return [number for number in range(start, stop) if (parity == parity.EVEN and number % 2 == 0) or (parity == parity.ODD and number % 2 != 0)]
+    return [number for number in range(start, stop) if
+            (parity == parity.EVEN and number % 2 == 0) or (parity == parity.ODD and number % 2 != 0)]
 
 
 def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
@@ -50,7 +51,7 @@ def gen_set(val_in: str) -> Set:
     what this method was supposed to do. Hey if you do, maybe you could do some good in this world by
     updating this here docstring to something useful.
 
-    :param val_in:
-    :return:
+    :param val_in: string
+    :return: return lowercase letters as uppercase in order of alphabetically or in the order they appear
     """
-    pass
+    return {string.upper() for string in val_in if string == string.lower()}
