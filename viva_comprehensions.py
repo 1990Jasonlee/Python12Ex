@@ -13,12 +13,20 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     what this method was supposed to do. Hey if you do, maybe you could do some good in this world by
     updating this here docstring to something useful.
 
-    :param start:
-    :param stop:
-    :param parity:
-    :return:
+    :param start: starting integer number given
+    :param stop: ending integer number given
+    :param parity: count even or odd
+    :return: list of even or odd numbers in range
     """
-    pass
+    # list = []
+    # for number in range(start, stop):
+    #     if parity == parity.EVEN and number % 2 == 0:
+    #         list.append(int(number))
+    #     elif parity == parity.ODD and number % 2 != 0:
+    #         list.append(int(number))
+    # return list
+
+    return [number for number in range(start, stop) if (parity == parity.EVEN and number % 2 == 0) or (parity == parity.ODD and number % 2 != 0)]
 
 
 def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
