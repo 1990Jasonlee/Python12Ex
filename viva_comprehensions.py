@@ -36,12 +36,12 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
     updating this here docstring to something useful.
 
 
-    :param start:
-    :param stop:
-    :param strategy:
-    :return:
+    :param start: starting integer number given
+    :param stop: ending integer number given
+    :param strategy: some math formula
+    :return: key * value
     """
-    pass
+    return {number: strategy(number) for number in range(start, stop)}
 
 
 def gen_set(val_in: str) -> Set:
